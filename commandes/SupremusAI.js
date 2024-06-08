@@ -6,12 +6,12 @@ const axios = require('axios');
 
 
 
-zokou({nomCom:"bot",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"sbot",reaction:"📡",categorie:"SupremusIA"},async(dest,zk,commandeOptions)=>{
 
   const {repondre,ms,arg}=commandeOptions;
   
     if(!arg || !arg[0])
-    {return repondre("oui je vous ecoute.")}
+    {return repondre("🤖 oui je vous ecoute.")}
     //var quest = arg.join(' ');
   try{
     
@@ -45,12 +45,12 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
 
 
-zokou({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "sdalle", reaction: "📡", categorie: "SupremusIA" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
     if (!arg || arg.length === 0) {
-      return repondre(`Veuillez entrer les informations nécessaires pour générer l'image.`);
+      return repondre(`🤖 Veuillez entrer les informations nécessaires pour générer l'image.`);
     }
 
     // Regrouper les arguments en une seule chaîne séparée par "-"
@@ -58,7 +58,7 @@ zokou({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, c
     const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${image}`);
     
     const data = response.data;
-    let caption = '*Propulsé par ZOKOU-MD*';
+    let caption = '*🪀 Propulsé par SUPREMUS PROD 🪀*';
     
     if (data.status && data.owner && data.data) {
       // Utiliser les données retournées par le service
@@ -73,12 +73,12 @@ zokou({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, c
   }
 });
 
-zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gpt", reaction: "📡", categorie: "SupremusIA" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
     if (!arg || arg.length === 0) {
-      return repondre(`Veuillez poser une questions.`);
+      return repondre(`🤖 Veuillez poser une questions.`);
     }
 
     // Regrouper les arguments en une seule chaîne séparée par "-"
